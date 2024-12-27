@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="icon" type="image/x-icon" href="{{url_for('static',filename='images/logo.jpeg')}}">
+    <style>
+        .main{
+    background: linear-gradient(to right, lightpink, gray);
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 10px;
+}
+.contact{
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+    background-color: white;
+    margin-top : 10px;
+    margin-left: 30px;
+    margin-right: 20px;
+    margin-bottom: 50px;
+    padding : 10px;
+    align-items: center;
+    justify-content: center;
+}
+.contact div{
+    background: linear-gradient(to left, pink,lightslategray);
+    margin-right: 80px;
+    margin-left: 30px;
+
+}
+.maps{
+    background-color: lightslategray;
+    align-items: center;
+    justify-content: center;
+    margin-top : 10px;
+    margin-left: 70px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    padding : 10px;
+}
+h1,h5,p{
+    text-align: center;
+}
+h1{
+    background-color: black;
+    color: white;
+    font-family: cursive;
+    font-weight: bold;
+}
+h1::after{
+    content: ":)";
+}
+h1::first-letter{
+    font-size: 2.5rem;
+}
+p{
+    font-weight: bold;
+    color: black;
+    text-shadow: 5px 5px 10px palevioletred;
+    font-size: medium;
+    font-family: cursive;
+}
+
+
+
+    </style>
+</head>
+<body>
+    <h1>ABOUT US</h1>
+    <br>
+    <p>please contact to below details for any queries</p>
+    <br>
+    <div class="main">
+        <div class="contact">
+            <div class="b1">
+                <h1>HYDERABAD</h1>
+                <h5>Mobile: +91*******</h5>
+                <h5>Email:stdmgnt@.com</h5>
+            </div>
+            <div class="b2">
+                <h1>MIRYALAGUDA</h1>
+                <h5>Mobile: +91*******</h5>
+                <h5>Email:stdmgnt@.com</h5>
+                
+            </div>
+            <div class="b3">
+                <h1>NALGONDA</h1>
+                <h5>Mobile: +91*******</h5>
+                <h5>Email:stdmgnt@.com</h5>
+            </div>
+        </div>
+        <div class="maps">
+            <p style="text-align: center;"><iframe class="x" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3805.191162022016!2d78.3858763741266!3d17.498385799600065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91959592aba9%3A0x6bba1d480cb50bad!2sCodegnan%20Hyderabad%20-%20Python%2C%20Java%2C%20Data%20science%2C%20Machine%20learning%2C%20React%20JS%20training%20institute!5e0!3m2!1sen!2sin!4v1726819936515!5m2!1sen!2sin" width="600" height="550" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

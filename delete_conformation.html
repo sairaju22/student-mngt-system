@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirm Deletion</title>
+    <style>
+        body {
+            background-color: #f7f7f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+            font-family: cursive;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2rem;
+            color: palevioletred;
+        }
+
+        h2::first-letter {
+            font-size: 3rem;
+            font-weight: 200;
+            color: palevioletred;
+        }
+
+        h2::after {
+            content: ':)';
+            color: palevioletred;
+        }
+
+        .card {
+            background-color: white;
+            box-shadow: 10px 10px 5px gray;
+            padding: 25px;
+            display: grid;
+            grid-template-rows: auto;
+            margin-top: 50px;
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin: 15px 0;
+            color: black;
+            padding: 5px;
+        }
+
+        .btn-primary {
+            background-color: palevioletred;
+            color: #fff;
+            border: none;
+            padding: 12px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 100%;
+        }
+
+        .btn-primary:hover {
+            background-color: #b55f97;
+        }
+
+        .update-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .update-link a {
+            text-decoration: none;
+            color: palevioletred;
+        }
+
+        .update-link a:hover {
+            text-decoration: underline;
+        }
+
+        label {
+            margin-top: 10px;
+            display: block;
+            font-weight: bold;
+        }
+
+        button {
+            background-color: palevioletred;
+            color: white;
+            border: none;
+            padding: 12px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #b55f97;
+        }
+
+        a {
+            display: inline-block;
+            background-color: #ccc;
+            padding: 12px;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+
+        a:hover {
+            background-color: #aaa;
+        }
+
+    </style>
+</head>
+<body>
+  <div class="card">
+    <h2>Confirm Deletion</h2>
+    <p>Are you sure you want to delete the student <strong>{{student.name}}</strong>?</p>
+    <form method="POST">
+        <button type="submit">Yes, Delete</button>
+    </form>
+    <a href="{{ url_for('student_list') }}">Cancel</a>
+  </div>
+</body>
+</html>

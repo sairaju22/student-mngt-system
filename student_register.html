@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration</title>
+  <style>
+    body {
+      background-color: #f7f7f7;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 20px;
+      font-family: cursive;
+    }
+
+    h1, h2 {
+      text-align: center;
+      font-size: 2rem;
+      color: palevioletred;
+    }
+
+    h2::first-letter {
+      font-size: 3rem;
+      font-weight: 200;
+      color: palevioletred;
+    }
+
+    h2::after {
+      content: ':)';
+      color: palevioletred;
+    }
+
+    .card {
+      background-color: white;
+      box-shadow: 10px 10px 5px gray;
+      padding: 25px;
+      display: grid;
+      grid-template-rows: auto;
+      margin-top: 50px;
+      width: 100%;
+      max-width: 500px;
+    }
+
+    .form-group {
+      margin: 15px 0;
+      color: black;
+      padding: 5px;
+    }
+
+    .form-group input {
+      border-radius: 5px;
+      height: 25px;
+      width: 100%;
+      border: 1px solid gainsboro;
+      padding: 8px;
+    }
+
+    .btn-primary {
+      background-color: palevioletred;
+      color: #fff;
+      border: none;
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      width: 100%;
+    }
+
+    .btn-primary:hover {
+      background-color: #b55f97;
+    }
+
+    .register-link {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .register-link a {
+      text-decoration: none;
+      color: palevioletred;
+    }
+
+    .register-link a:hover {
+      text-decoration: underline;
+    }
+
+    label {
+      margin-top: 10px;
+      display: block;
+      font-weight: bold;
+    }
+
+    button {
+      background-color: palevioletred;
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background-color: #b55f97;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>Student Registration</h2>
+    <form method="POST">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" placeholder="Your full name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="address">Address</label>
+        <input id="address" name="address" type="text" placeholder="Your address" required>
+      </div>
+
+      <div class="form-group">
+        <label for="age">Age</label>
+        <input id="age" name="age" type="number" placeholder="Your age" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="Your email" required>
+      </div>
+
+      <button type="submit" class="btn-primary">Submit</button>
+    </form>
+    <div class="register-link">
+      <p>Do you want to check student data and give details?</p>
+      <a href="{{url_for('student_list')}}">View Student Details</a>
+    </div>
+  </div>
+</body>
+</html>
